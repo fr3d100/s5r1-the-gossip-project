@@ -14,9 +14,13 @@ class StaticPagesController < ApplicationController
   	@first_name = params['first_name']
   end
 
-  def show
+  def show_gossip
   	@gossip = Gossip.find(params['gossip_id'])
   	puts @gossip
+  end
+   def show_user
+  	@user = User.find(params['user_id'])
+  	puts @user
   end
 
 end
