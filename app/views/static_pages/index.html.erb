@@ -36,21 +36,24 @@
   	<!-- CONTENT -->
 		<div class="row m-3">
 			<div class="col-sm-12">
-				<h1>Voici la liste des potins</h1>
-			</div>
-			<div class="col-sm-12">
-				<h4>Voici la liste de tous les potins :</h4>
+				<h1>Bienvenue ! </h1>
+				<h2>Voici la liste de tous les potins :</h2>
 			</div>
 			<div class="row m-3">
-				<div class="col-sm-6">
+				<div class="col-sm-12">
 				<% @gossips.all.each do |gossip|  %>
-					<div class="card" style="width: 18rem;">
-					  <div class="card-body">
-					    <h5 class="card-title"><%=gossip.title%></h5>
-					    <h6 class="card-subtitle mb-2 text-muted"> Par <%= gossip.user.first_name%></h6>
-					    <p class="card-text"><%= gossip.content %></p>
-					  </div>
-					</div>			
+					<div class="list-group" style= "min-width: 500px">
+					  <span href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+					    <div class="d-flex w-100 justify-content-between">
+					      <h5 class="mb-1"><%=gossip.title%></h5>
+					      <small class="text-muted"><%=gossip.created_at%></small>
+					    </div>
+					    <small class="text-muted">Par <%= gossip.user.first_name %>&nbsp; <%= gossip.user.last_name %></small>
+							<br>
+					  	<%= link_to "Show gossip", show_gossip_path(gossip.id), class: "badge badge-primary" %>
+					  </span>
+  				</div>	
+				<br>
 				<% end %>
 				</div>
 
