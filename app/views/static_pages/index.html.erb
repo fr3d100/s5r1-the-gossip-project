@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>THPotin - Home</title>
+  </head>
+  <body>
+
+  	<!-- HEADER -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="#">THPotin</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <%= link_to "All", team_path, class: "nav-link active" %>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "Team", team_path, class: "nav-link" %>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "Contact", contact_path, class: "nav-link" %>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+
+  	<!-- CONTENT -->
+		<div class="row m-3">
+			<div class="col-sm-12">
+				<h1>Voici la liste des potins</h1>
+			</div>
+			<div class="col-sm-12">
+				<h4>Voici la liste de tous les potins :</h4>
+			</div>
+			<div class="row m-3">
+				<div class="col-sm-6">
+				<% @gossips.all.each do |gossip|  %>
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title"><%=gossip.title%></h5>
+					    <h6 class="card-subtitle mb-2 text-muted"> Par <%= gossip.user.first_name%></h6>
+					    <p class="card-text"><%= gossip.content %></p>
+					  </div>
+					</div>			
+				<% end %>
+				</div>
+
+			</div>
+
+		</div>
+
+
+   
+		
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
