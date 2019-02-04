@@ -33,5 +33,8 @@ rails s
 ```
 rspec
 ```
+## La marche à suivre pour lire les potins
+![Cockail](https://media.giphy.com/media/sxwR4d9Nx6HII/giphy.gif)
+
 
 Fait avec :hearts: par @Fred
