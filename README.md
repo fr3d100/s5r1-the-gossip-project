@@ -29,6 +29,9 @@ rails db:seed
 ```
 rails s
 ```
+## La marche à suivre pour lancer les tests de l'application
+```
+rspec
+```
 
- 
 Fait avec :hearts: par @Fred
