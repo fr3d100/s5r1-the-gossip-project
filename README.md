@@ -1,6 +1,6 @@
 Bienvenue sur mon super THPotins project !
 ======
-![Gossip Girl](https://upload.wikimedia.org/wikipedia/commons/8/8c/Gossip_Girl_title_card.jpg)
+![Gossip Girl](https://media.giphy.com/media/wooMSWlvPGEBG/giphy.gif)
 
 ## La marche à suivre pour récupérer et tester l'application :
 
@@ -34,7 +34,7 @@ rails s
 rspec
 ```
 ## La marche à suivre pour lire les potins
-![Cockail](https://media.giphy.com/media/sxwR4d9Nx6HII/giphy.gif)
+![Popcorn](https://media.giphy.com/media/KyGEqzh9PAHPDZX5ps/giphy.gif)
 
 
 Fait avec :hearts: par @Fred
