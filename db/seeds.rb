@@ -27,7 +27,7 @@ puts "10 villes ont été crées"
 
 #Création de 10 users
 10.times do
-	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: "J'ai plein de Gossip à partgaer sur tout le monde, attention, le prochain est peut-être bien toi!", email: Faker::Internet.email, age: Faker::Number.between(7, 77).to_i, city: City.order("RANDOM()").first)
+	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: "J'ai plein de Gossip à partager sur tout le monde, attention, le prochain est peut-être bien toi!", email: Faker::Internet.email, age: Faker::Number.between(7, 77).to_i, city: City.order("RANDOM()").first)
 end 
 puts "10 utilisateurs ont été créés"
 
